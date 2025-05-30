@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(#fceabb, #f8b500);
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6vw; /* responsive font size */
+  margin: 15vh 10px 20px;
+  color: #fff;
+  text-shadow: 2px 2px #f08;
+}
+
+.button {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 25px;
+  font-size: 5vw; /* responsive button text */
+  border: none;
+  border-radius: 30px;
+  background: #ff6f91;
+  color: white;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.balloon {
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background: red;
+  border-radius: 50%;
+  animation: floatUp 10s linear infinite;
+}
+
+@keyframes floatUp {
+  from { bottom: -100px; }
+  to { bottom: 110%; }
+}
+
+img {
+  width: 60vw; /* responsive image */
+  max-width: 250px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 15px #fff;
+}
+
+p {
+  text-align: center;
+  font-size: 5vw; /* responsive text */
+  color: #fff;
+  margin: 20px 10px;
+  line-height: 1.4;
+}
