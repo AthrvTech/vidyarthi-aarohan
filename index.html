@@ -5,7 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Shanaya</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Great Vibes', cursive;
+      background: linear-gradient(to bottom, #fceabb, #f8b500);
+      overflow-x: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 8vw;
+      color: #fff;
+      margin: 20vh 10px 30px;
+      text-shadow: 2px 2px #f08;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 6vw;
+      border: none;
+      border-radius: 30px;
+      background: #ff6f91;
+      color: white;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .balloon {
+      position: absolute;
+      width: 30px;
+      height: 50px;
+      background: red;
+      border-radius: 50%;
+      animation: floatUp 10s linear infinite;
+    }
+    @keyframes floatUp {
+      from { bottom: -100px; }
+      to { bottom: 110%; }
+    }
+    img {
+      width: 70vw;
+      max-width: 300px;
+      border-radius: 50%;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 0 15px #fff;
+    }
+    p {
+      font-size: 5vw;
+      color: #fff;
+      margin: 20px 10px;
+      line-height: 1.5;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -13,6 +73,36 @@
     <button class="button" onclick="showSorry()">Click Me</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // Create floating balloons
+    for (let i = 0; i < 15; i++) {
+      let b = document.createElement('div');
+      b.classList.add('balloon');
+      b.style.left = Math.random() * 100 + 'vw';
+      b.style.background = ['#ff6f91', '#ff9671', '#ffc75f'][Math.floor(Math.random() * 3)];
+      b.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(b);
+    }
+
+    function showSorry() {
+      document.body.innerHTML = `
+        <div class="container">
+          <h1>“Shanaya, dil se sorry… <br> Pawan ki taraf se…”</h1>
+          <img src="./shanaya.jpg" alt="Shanaya">
+          <button class="button" onclick="showFinal()">Click for Surprise</button>
+        </div>
+      `;
+    }
+
+    function showFinal() {
+      document.body.innerHTML = `
+        <div class="container">
+          <h1>“Shanaya, tum meri zindagi ka khubsurat ehsaas ho, <br> tumhari hasi meri jaan hai…”</h1>
+          <img src="./shanaya.jpg" alt="Shanaya">
+          <p>Jab tak tumhare saath ho, har din ek nayi khushi laata hai. 💕<br>Pawan</p>
+        </div>
+      `;
+    }
+  </script>
 </body>
 </html>
