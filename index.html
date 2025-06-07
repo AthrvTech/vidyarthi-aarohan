@@ -7,27 +7,54 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Nexon Quantum</div>
-    <div class="menu-toggle" id="menuToggle">&#9776;</div>
-  </nav>
-
-  <aside class="sidebar" id="sidebar">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </aside>
+  <header class="navbar">
+    <h1 class="logo">Nexon Quantum</h1>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav id="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
   <section class="hero">
-    <div class="hero-content">
-      <h1>Empowering Innovation ⚛️</h1>
-      <p>Quantum-Tech Meets Creative Agency Excellence</p>
-      <a href="#" class="cta-btn">Let’s Build the Future</a>
+    <h2 class="title">Empowering Innovation <span class="emoji">⚛️</span></h2>
+    <p class="subtitle">Quantum-Tech Meets Creative Agency Excellence</p>
+    <button onclick="scrollToSection('about')">Let’s Build the Future</button>
+  </section>
+
+  <section class="stats" id="about">
+    <div><h3>50+</h3><p>Clients</p></div>
+    <div><h3>200+</h3><p>Projects</p></div>
+    <div><h3>10</h3><p>Press Features</p></div>
+  </section>
+
+  <section class="feedback" id="feedback">
+    <h2>Client Feedback 💬</h2>
+    <p>"Nexon Quantum transformed our brand! 🚀"</p>
+    <p>"Superb service and futuristic design! ✨"</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="note">
+      <h3>A Note from CEO</h3>
+      <p>At Nexon Quantum, we believe in merging technology with creativity to craft exceptional experiences. — Shivansh</p>
+    </div>
+    <div class="form">
+      <h3>Contact Us</h3>
+      <form action="https://formspree.io/f/xeqbdzvj" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </div>
   </section>
+
+  <footer>
+    <p>© 2025 Nexon Quantum | All Rights Reserved 🇮🇳 | Let's Make in India</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
