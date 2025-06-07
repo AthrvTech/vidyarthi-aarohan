@@ -1,1 +1,82 @@
+/* Root Colors */
+:root {
+  --deep-aqua: #003B46;
+  --ocean: #07575B;
+  --wave: #66A5AD;
+  --seafoam: #C4DFE6;
+  --font: 'Poppins', sans-serif;
+}
 
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: linear-gradient(to right, var(--deep-aqua), var(--wave));
+  color: white;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: var(--ocean);
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.toggle-btn {
+  font-size: 24px;
+  position: fixed;
+  top: 20px; left: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 11;
+}
+
+/* Main Hero */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+.cta {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--seafoam);
+  color: var(--deep-aqua);
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .sidebar {
+    display: flex;
+  }
+  .toggle-btn {
+    display: none;
+  }
+}
