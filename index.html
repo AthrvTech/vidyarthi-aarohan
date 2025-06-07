@@ -7,24 +7,27 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="sidebar" id="sidebar">
-    <h2>NQ 🚀</h2>
-    <a href="#">Home</a>
-    <a href="#">About Us</a>
-    <a href="#">Services</a>
-    <a href="#">Brochure</a>
-    <a href="#">Contact</a>
-  </div>
+  <nav class="navbar">
+    <div class="logo">Nexon Quantum</div>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
 
-  <div class="main">
-    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  <aside class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </aside>
 
-    <section class="hero">
-      <h1>Empowering Innovation for the Quantum Age ⚛️</h1>
-      <p>Building bold solutions with design, code, and intelligence.</p>
-      <a href="#" class="cta">Let’s Build Together</a>
-    </section>
-  </div>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering Innovation ⚛️</h1>
+      <p>Quantum-Tech Meets Creative Agency Excellence</p>
+      <a href="#" class="cta-btn">Let’s Build the Future</a>
+    </div>
+  </section>
 
   <script src="script.js"></script>
 </body>
