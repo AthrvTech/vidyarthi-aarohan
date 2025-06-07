@@ -1,14 +1,12 @@
-const menuToggle = document.getElementById('menuToggle');
-const sidebar = document.getElementById('sidebar');
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
 
-// Toggle sidebar on click
 menuToggle.addEventListener('click', () => {
-  sidebar.style.right = '0';
+  navLinks.classList.toggle('active');
 });
 
-// Hide sidebar when clicked outside
-document.addEventListener('click', function (e) {
-  if (!sidebar.contains(e.target) && !menuToggle.contains(e.target)) {
-    sidebar.style.right = '-250px';
+document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && e.target !== menuToggle) {
+    navLinks.classList.remove('active');
   }
 });
