@@ -2,23 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nexon Quantum</title>
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <header class="hero-section">
-    <canvas id="particles"></canvas>
-    <div class="hero-content">
-      <h1 class="hero-logo">NEXON QUANTUM</h1>
-      <p class="hero-tagline"><span id="typewriter"></span> ⚛️</p>
-      <button class="cta-button" id="cta-btn">Let's Build Together 🚀</button>
-    </div>
+  <header>
+    <h1>🚀 Nexon Quantum</h1>
+    <p>Empowering Innovation for the Quantum Age ⚛️</p>
   </header>
 
-  <footer>© 2025 Nexon Quantum | Made with 💙 in India</footer>
+  <div class="container">
+    <h2 class="section-title">📞 Contact Us</h2>
+    <form action="https://formspree.io/f/mqkrgrjy" method="POST" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message ✉️</button>
+      <p id="form-message"></p>
+    </form>
+  </div>
 
+  <footer>
+    <p>© 2025 Nexon Quantum. Made with 💙 in India.</p>
+  </footer>
+
+  <!-- JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
