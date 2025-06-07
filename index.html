@@ -1,110 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Shanaya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Great Vibes', cursive;
-      background: linear-gradient(to bottom, #fceabb, #f8b500);
-      overflow-x: hidden;
-    }
-    .container {
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 8vw;
-      color: #fff;
-      margin: 20vh 10px 30px;
-      text-shadow: 2px 2px #f08;
-    }
-    .button {
-      padding: 15px 30px;
-      font-size: 6vw;
-      border: none;
-      border-radius: 30px;
-      background: #ff6f91;
-      color: white;
-      cursor: pointer;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    .balloon {
-      position: absolute;
-      width: 30px;
-      height: 50px;
-      background: red;
-      border-radius: 50%;
-      animation: floatUp 10s linear infinite;
-    }
-    @keyframes floatUp {
-      from { bottom: -100px; }
-      to { bottom: 110%; }
-    }
-    img {
-      width: 70vw;
-      max-width: 300px;
-      border-radius: 50%;
-      display: block;
-      margin: 20px auto;
-      box-shadow: 0 0 15px #fff;
-    }
-    p {
-      font-size: 5vw;
-      color: #fff;
-      margin: 20px 10px;
-      line-height: 1.5;
-      text-align: center;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nexon Quantum</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>“Teri aankhon mein khoya hua sa rehta hoon…”</h1>
-    <button class="button" onclick="showSorry()">Click Me</button>
-  </div>
 
-  <script>
-    // Create floating balloons
-    for (let i = 0; i < 15; i++) {
-      let b = document.createElement('div');
-      b.classList.add('balloon');
-      b.style.left = Math.random() * 100 + 'vw';
-      b.style.background = ['#ff6f91', '#ff9671', '#ffc75f'][Math.floor(Math.random() * 3)];
-      b.style.animationDuration = (5 + Math.random() * 5) + 's';
-      document.body.appendChild(b);
-    }
+  <header class="hero-section">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-logo">NEXON QUANTUM</h1>
+      <p class="hero-tagline"><span id="typewriter"></span> ⚛️</p>
+      <button class="cta-button" id="cta-btn">Let's Build Together 🚀</button>
+    </div>
+  </header>
 
-    function showSorry() {
-      document.body.innerHTML = `
-        <div class="container">
-          <h1>“Shanaya, dil se sorry… <br> Shona…”</h1>
-          
-          <button class="button" onclick="showFinal()">Click for Surprise</button>
-        </div>
-      `;
-    }
+  <footer>© 2025 Nexon Quantum | Made with 💙 in India</footer>
 
-    function showFinal() {
-      document.body.innerHTML = `
-        <div class="container">
-          <h1>“Shanaya, tum meri zindagi ka khubsurat ehsaas ho, <br> tumhari hasi meri jaan hai…”</h1>
-          <h1>“Happy Birthday, <br> Cutie Shanaya…”</h1>
-          
-        
-          <p>Jab tak tumhare saath ho, har din ek nayi khushi laata hai. 💕<br> Love You Babe </p> <br> Your Love Pawan </p>
-        </div>
-      `;
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
