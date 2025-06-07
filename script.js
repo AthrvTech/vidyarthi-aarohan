@@ -1,12 +1,5 @@
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+// Optional scroll hint effect
+document.querySelector('.scroll-down').addEventListener('click', () => {
+  window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
 });
 
-document.addEventListener('click', (e) => {
-  if (!navLinks.contains(e.target) && e.target !== menuToggle) {
-    navLinks.classList.remove('active');
-  }
-});
