@@ -1,1 +1,371 @@
+/* Brand Colors */
+:root {
+  --deep-aqua: #003b46;
+  --ocean: #07575b;
+  --wave: #66a5ad;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-dark: #444;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--gray-light);
+  color: var(--deep-aqua);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER & NAV */
+header {
+  background: var(--deep-aqua);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px var(--shadow);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: default;
+  user-select: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
+  transition: background-color 0.3s ease;
+  border-radius: 4px;
+}
+
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+  background-color: var(--wave);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 2px;
+}
+
+/* MAIN CONTENT */
+main {
+  flex-grow: 1;
+  max-width: 1200px;
+  width: 95%;
+  margin: 2rem auto;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, var(--deep-aqua), var(--ocean));
+  color: var(--white);
+  border-radius: 10px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+  color: var(--wave);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-buttons a {
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--deep-aqua);
+  background: var(--wave);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(102, 165, 173, 0.4);
+}
+
+.hero-buttons a:hover {
+  background: var(--white);
+  color: var(--ocean);
+}
+
+/* Particle canvas */
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 3rem;
+}
+
+/* Projects Section */
+.projects-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+.projects-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-list::-webkit-scrollbar-thumb {
+  background: var(--wave);
+  border-radius: 4px;
+}
+
+/* Project card */
+.project-card {
+  min-width: 280px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--shadow);
+  padding: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--deep-aqua);
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--ocean);
+}
+
+/* Feedback Section */
+.feedback-list {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow);
+}
+
+.feedback-item {
+  border-bottom: 1px solid var(--wave);
+  padding: 1rem 0;
+}
+
+.feedback-item:last-child {
+  border-bottom: none;
+}
+
+.feedback-item strong {
+  color: var(--deep-aqua);
+}
+
+.feedback-item p {
+  font-style: italic;
+  color: var(--ocean);
+  margin-top: 0.3rem;
+}
+
+.feedback-stars {
+  color: gold;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+}
+
+/* CEO Note Section */
+.ceo-note {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.ceo-note .note-text {
+  flex: 1 1 350px;
+  font-size: 1rem;
+  color: var(--deep-aqua);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.ceo-note .contact-details {
+  flex: 1 1 250px;
+  font-weight: 600;
+  color: var(--ocean);
+}
+
+/* Footer */
+footer {
+  background: var(--deep-aqua);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+footer .left,
+footer .right {
+  flex: 1 1 200px;
+}
+
+/* Media Queries */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--deep-aqua);
+    position: absolute;
+    right: 1.5rem;
+    top: 60px;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px var(--shadow);
+    width: 180px;
+    z-index: 1100;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Forms */
+form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+  color: var(--deep-aqua);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1.5px solid var(--wave);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--deep-aqua);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: var(--ocean);
+}
+
+/* Buttons */
+button, .btn {
+  cursor: pointer;
+  background: var(--wave);
+  border: none;
+  padding: 0.75rem 1.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  color: var(--deep-aqua);
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(102, 165, 173, 0.5);
+}
+
+button:hover, .btn:hover {
+  background: var(--ocean);
+  color: var(--white);
+}
+
+/* Scrollbar for projects horizontal */
+.projects-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-list::-webkit-scrollbar-thumb {
+  background: var(--wave);
+  border-radius: 6px;
+}
+
+/* Accessibility focus */
+.menu-toggle:focus {
+  outline: 2px solid var(--wave);
+  outline-offset: 2px;
+}
