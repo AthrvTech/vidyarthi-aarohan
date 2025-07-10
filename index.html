@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submit Tip | UnmaskFiles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: #D7CEC7;
+      color: #333;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      background-color: #F3F1EF;
+      border-bottom: 1px solid #C4BCB6;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #76323F;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #565656;
+      font-style: italic;
+    }
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #DDD;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .form-container label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #76323F;
+    }
+    .form-container input[type="text"],
+    .form-container textarea,
+    .form-container select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #CCC;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+    }
+    .form-container textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-container input[type="file"] {
+      margin-top: 10px;
+    }
+    .form-container .anon-checkbox {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .form-container .anon-checkbox input {
+      margin-right: 8px;
+    }
+    .form-container button {
+      background-color: #76323F;
+      color: #fff;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .form-container button:hover {
+      background-color: #C09F80;
+      color: #111;
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 15px;
+      font-style: italic;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 60px;
+      padding: 20px;
+      border-top: 1px solid #C4BCB6;
+      background-color: #F3F1EF;
+    }
+  </style>
+</head>
+<body>
 
+  <header>
+    <h1>Submit a Tip</h1>
+    <p>Your identity remains hidden. Files speak louder than faces.</p>
+  </header>
+
+  <div class="form-container">
+    <form>
+      <label for="title">Title of Incident</label>
+      <input type="text" id="title" name="title" placeholder="e.g. Hidden land deal scam" required />
+
+      <label for="description">Describe the Incident</label>
+      <textarea id="description" name="description" placeholder="Provide as much detail as possible..." required></textarea>
+
+      <label for="category">Category</label>
+      <select id="category" name="category" required>
+        <option value="" disabled selected>Select one...</option>
+        <option>Corruption / Scam</option>
+        <option>Bribery</option>
+        <option>Propaganda / Fake News</option>
+        <option>Human Rights Violation</option>
+        <option>Others</option>
+      </select>
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="City, State or Country" />
+
+      <label for="file">Upload Evidence (image, PDF, video)</label>
+      <input type="file" id="file" name="file" />
+
+      <div class="anon-checkbox">
+        <input type="checkbox" id="anonymous" name="anonymous" checked />
+        <label for="anonymous">Submit anonymously</label>
+      </div>
+
+      <button type="submit">Submit Tip</button>
+      <p class="note">
+        * All data is stored locally in browser until backend is active. ✔
+      </p>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 UnmaskFiles. Truth has no owner.
+  </footer>
+
+</body>
+  </html>
+  
